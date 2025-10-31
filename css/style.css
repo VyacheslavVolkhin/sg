@@ -266,6 +266,9 @@ html.with-fancybox body.hide-scrollbar {
   -ms-flex: 1 0 auto;
       flex: 1 0 auto;
 }
+.wrap-light {
+  background: #fff;
+}
 .wrap,
 .header,
 .nav,
