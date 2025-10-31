@@ -1,0 +1,237 @@
+/* ----------------------------------- *\
+			content styles
+\* ----------------------------------- */
+.panel-form-box {
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 110px 0;
+	.form-inner-wrap {
+		padding: 0 15px;
+	}
+	.frm-row {
+		margin: 0;
+	}
+	.frm-field {
+		margin-bottom: 19px;
+		width: 100%;
+		padding: 0;
+	}
+	.frm-row-submit {
+		text-align: center;
+		margin: 0;
+		.frm-field {
+			margin: 0;
+		}
+	}
+}
+.panel-steps-box {
+	margin-bottom: 40px;
+	.items-wrap {
+		margin: 0;
+		display: block;
+		padding: 0 20px;
+	}
+	.item-wrap {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 80px;
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			width: 2px;height: 38px;
+			background: url(../img/icons/dots.svg) center no-repeat;
+			background-size: auto 100%;
+			position: absolute;
+			top: 100%;left: 27px;
+			margin-top: 21px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+.panel-title-box {
+	background: #fff;
+	padding: 20px 0 9px 0;
+	margin-bottom: 38px;
+	.panel-title {
+		text-align: center;
+		font-size: 18px;
+		line-height: 1.7;
+		font-weight: bold;
+		margin: 0;
+	}
+}
+.panel-info-box {
+	background: #FCEE1F;
+	color: #565A5C;
+	.inner-wrap {
+		display: flex;
+		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		gap: 30px;
+	}
+	.panel-info {
+		display: block;
+		flex-shrink: 0;
+		position: relative;
+		min-width: 167px;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			background: url(../img/line.svg) center no-repeat;
+			background-size: 100% auto;
+			aspect-ratio: 198/69;
+			width: 118%;
+			position: absolute;
+			top: 50%;left: 50%;
+			pointer-events: none;
+			transform: translate(-50%, -50%);
+			z-index: 110;
+		}
+	}
+	.panel-info-code {
+		display: block;
+		font-size: 17.5px;
+		text-transform: uppercase;
+		font-weight: bold;
+		line-height: 24px;
+		padding: 8px 24px;
+		min-width: 167px;
+		white-space: nowrap;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		background: #fff;
+		border-radius: 30px;
+		text-align: center;
+		.ftitle;
+	}
+	.panel-title {
+		font-size: 15px;
+		line-height: 0.95;
+		font-weight: bold;
+		font-family: 'Times New Roman', serif;
+		text-align: center;
+		flex: 1;
+	}
+}
+.panel-top-box {
+	padding: 15px 0 85px 0;
+	.panel-info {
+		margin-bottom: 110px;
+		display: flex;
+		justify-content: center;
+		padding-left: 40px;
+	}
+	.panel-info-main {
+		display: flex;
+		justify-content: center;
+	}
+	.elm-info {
+		max-width: 20em;
+	}
+}
+.bg-full-wrap {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 100dvw;
+	min-width: var(--min);
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+.bg-box {
+	position: relative;
+	z-index: 2;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 100dvw;
+		min-width: var(--min);
+		transform: translateX(-50%);
+		overflow: hidden;
+		background: var(--clr-bg-light);
+	}
+	&>*:last-child {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 359px) {
+	.panel-top-box .panel-info, .panel-top-box .panel-info-main {
+		padding-left: 0;
+	}
+	.panel-steps-box .items-wrap {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.panel-info-box .panel-title {
+		font-size: 13px;
+	}
+}
+@media (min-width: 768px) {
+	.panel-steps-box {
+		margin-bottom: 40px;
+		.items-wrap {
+			padding: 0;
+			margin: 0 auto;
+			max-width: 600px;
+		}
+		.item-wrap {
+			margin-bottom: 98px;
+			&:before {
+				width: 3px;height: 57px;
+				margin-top: 20px;
+				left: 44px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.panel-title-box {
+		padding: 10px 0;
+		margin-bottom: 32px;
+	}
+	.panel-info-box {
+		.inner-wrap {
+			padding-right: 58px;
+		}
+		.panel-title {
+		}
+		.panel-info {
+			width: 52%;
+			&:before {
+				display: none;
+			}
+		}
+	}
+	.panel-top-box {
+		padding: 20px 0 50px 0;
+		.panel-info {
+			margin-bottom: 74px;
+			padding-left: 200px;
+		}
+		.panel-info-main {
+			padding-right: 50px;
+		}
+		.elm-info {
+			max-width: 24em;
+		}
+	}
+}
