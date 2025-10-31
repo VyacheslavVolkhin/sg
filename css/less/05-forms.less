@@ -1,6 +1,36 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-footer {
+	margin: 0 auto;
+	max-width: 500px;
+	.frm-row, .frm-row-submit {
+		margin: 0 -10px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0;
+	}
+	.frm-field {
+		width: 100%;
+		padding: 0 10px;
+		margin-bottom: 15px;
+		&.field-full {
+			width: 100%;
+		}
+	}
+	textarea.form-input {
+		padding-top: 10px;
+		height: 120px;
+	}
+	.field-info {
+		a {
+			color: inherit;
+			&:hover {
+				color: var(--clr-att);
+			}
+		}
+	}
+}
 .frm-row,
 .frm-field,
 .frm-row-submit {
@@ -95,5 +125,15 @@
 	.btn {
 			border-radius: 30px;
 			font-size: 13px;
+		}
+		.frm-footer {
+			.frm-field {
+				width: 50%;
+			}
+			.frm-row-submit {
+				.frm-field {
+					width: 100%;
+				}
+			}
 		}
 }
